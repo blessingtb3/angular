@@ -57,3 +57,122 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frontend framework that allows you to build web applications 
+
+Benefits of angular 
+    - Faster development 
+    - Faster code generation (CLI)
+    - Unit test ready
+    - Code reusability 
+
+VS react 
+    - Angular is a framework
+    - Angular has a built in CLI
+    - Has tools and packages included for small-medium scale apps 
+    - Has better code style and scalability 
+
+React 
+    - Is more of like a small library Library 
+    - Requires additional packages such as axios for http requests, etc
+    - Not have CLI
+
+
+Angular Core concepts: 
+    - Components, Services 
+    - Directive, Pipes 
+    - Data binding, event handlers 
+    - Http Module, Forms Module 
+    - Routing, Animations
+    - Testing and building for production
+
+Creating an angular app
+# install the @angular/cli
+npm install -g @angular.cli
+
+# check cli version 
+ng --version 
+
+# create an app 
+ng new first-ng-app # optimally use --dry-run
+
+# create an app with some configuration 
+ng new first-ng-app --inline-styles --inline-template
+
+# some of the other configurations
+ng new first-ng-app --dry-run
+#select SCSS(Sassy cascading style sheets, more advanced css)
+#no to Server-Side Rendering (SSR)
+
+Tips for the terminal 
+# to run 
+npm run
+
+# to build 
+npm build
+
+# to run unit test
+npm test
+
+
+
+
+
+Components 
+In Angular, a component is a core building block that controls part of the UI. It consists of a template (HTML), a class (TypeScript), and styles (CSS). Components are defined using the `@Component` decorator.
+
+In this project we are going to create an app with a header component and a home component
+
+# creting a component
+ng g c <nameOfComponetn> # short form 
+ng generate component header # full form 
+# the above commands create inside the `src/app` folder
+
+# OR  (in a nested directory)
+ng g c components/header
+# creates Header compoenent
+# inside the `src/app/components` folder
+
+
+# creating the home component
+ng g c home
