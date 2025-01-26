@@ -1,3 +1,8 @@
 <header>
-    <nav>{{title()}}</nav><!--calling the signal from our header component-->
+    <nav>
+        <span routerLink="/">{{title()}}</span><!--calling the signal from our header component-->
+        <ul>
+            <li routerLink="/todos">Todos</li>
+        </ul>
+    </nav>
 </header>
