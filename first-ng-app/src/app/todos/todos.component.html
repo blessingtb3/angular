@@ -1,1 +1,6 @@
-<p>todos works!</p>
+<!--<p>{{ todoItems()[0].title }}</p> example, rendering a single item-->  
+
+<!--rendering the entire list of items by their title as p elements and using track $index to track their index-->
+@for (todo of todoItems(); track todo.id) {
+    <p>{{ todo.title }}</p>
+}
