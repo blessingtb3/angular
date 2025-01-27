@@ -14,7 +14,7 @@ export class TodosComponent implements OnInit{
   todoItems = signal<Array<Todo>>([]);
 
   ngOnInit(): void {
-    console.log(this.todoService.todoItems);//logging
+    //console.log(this.todoService.todoItems);//logging the list of items
     this.todoItems.set(this.todoService.todoItems);//setting the value
   }
 }
