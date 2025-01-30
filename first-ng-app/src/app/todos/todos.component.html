@@ -16,8 +16,15 @@
     <p>Loading...</p>
 }
 
+<!--Displaying todos based on input-->
+<form>
+    <label>Filter Todos</label>
+    <input name = "searchTerm" [(ngModel)]="searchTerm" placeholder="Search todos ... " /><!--binding the value of the this placeholder with our signal from our component-->
+</form>
+
+<!--displaying todos based on existing todos gotten from an api endpoint-->
  <ul class="todos">
-    @for (todo of todoItems(); track todo.id) {
+    @for (todo of todoItems() | filterTodos : searchTerm(); track todo.id) {
         <app-todo-item (todoToggled)="updateTodoItem($event)" [todo]="todo"/>
     }
  </ul>
