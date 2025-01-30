@@ -176,3 +176,79 @@ ng g c components/header
 
 # creating the home component
 ng g c home
+
+
+
+
+
+# Routing in angular
+Angular is a single page application. Using routes, you can still define different pages that the user can navigate to. 
+It also allows the browser to only load the js for the page that the user is on.
+- Routing significantly prevents the web from reloading every time the user navigates to a different page by using routes, thus improving the performance of the app, and user experience.
+
+
+
+
+
+# Angular Services 
+    - Used to encapsulate data, making http calls, or performing any task that is not related directly to data rendering(in Ahsan's opinion)
+    - Anything that has nothing to do with rendering or the UI…
+
+
+
+
+
+# Dependency injection
+    - ( https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/ )
+    - In software engineering, dependency injection is a technique whereby one object (or static method) supplies the dependencies of another object. A dependency is an object that can be used (a service).
+
+
+
+
+
+# Making HTTP calls with Angular Services
+ - Provide HTTP module/providers in the app config using provideHttpClient()
+ - Inject the HttpClient service
+ - Use the http methods(e.g. get)
+
+
+
+
+
+ # Angular Directives
+  - Allow you to add additional behavior to elements in our Angular applications.
+
+Types of Angular Directives
+    - Components - every component is a directive
+    - Attribute directives - change some things about the existing html elements, eg adding a class, an attribute to the element, binding come click events…
+    - Structural directives - add or remove some things to and from a DOM based on some conditions
+    - Creating a directive 
+ng g directive directives/highlight-completed-todo
+
+
+
+
+
+# Angular Pipes
+- Used to transform data right in the templates, e.g. making data in uppercase, currency, date format, time format…
+- to create: ng pipe <dir>
+
+
+
+
+
+
+
+# Angular data-binding
+    - Binding data between the TypeScript class of the component, and the component's template
+    - The way you bind the data from your typescript class of angular to the template
+    - How do you make them communicate with each other and render data dynamically if it changes
+    - Done with signals or standard variables
+
+
+
+
+
+
+# Reference
+This application was created with the help of Code with Ahsan from youtube.
