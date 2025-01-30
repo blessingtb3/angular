@@ -8,11 +8,16 @@
 
  <h3>Todo List</h3>
 
+ <!--Display loading when loading data from the api-->
+ <!--<p *ngIf="!todoItems().length">Loading...</p>Structural directive to help display loading before loading the list-->
+
+ <!--Using a control flow block to display loading before the todo list items load on the list-->
+@if (!todoItems().length) {
+    <p>Loading...</p>
+}
+
  <ul class="todos">
     @for (todo of todoItems(); track todo.id) {
-        <li class="todos_item">
-            <input id="todo-{{todo.id}}" type="checkbox" [value]="todo.completed"/> 
-            <label for="todo-{{todo.id}}">{{ todo.title }}</label>   
-        </li>
+        <app-todo-item (todoToggled)="updateTodoItem($event)" [todo]="todo"/>
     }
  </ul>
